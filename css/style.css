@@ -270,14 +270,14 @@ footer {
     flex-flow: column wrap;
     text-align: center;
     background: #100e17;
+    padding-top: 30px;
 }
 
-footer .copyright {
+footer a,
+footer p {
     color: #fff;
-}
-
-footer .copyright a {
-    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
 }
 
 
@@ -474,7 +474,7 @@ div#devTime p {
 }
 
 div.spaceman-wrapper {
-    top: 0;
+    top: 25px;
     left: 135px;
 }
 
@@ -539,7 +539,7 @@ div.spaceman-wrapper {
     width: 150px;
     position: absolute;
     top: 60px;
-    left: 0;
+    left: -50px;
     z-index: 2;
     transition: all 1s ease-in-out;
 }
