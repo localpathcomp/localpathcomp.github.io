@@ -4,13 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garrick Crouch</title>
+    <title>Garrick Crouch - Web Developer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stars.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header>
+        <nav>
+            <ul class="scroll-spy">
+                <li class="active">
+                    <a href="#landing" class="scroll">Home</a>
+                </li>
+                <li>
+                    <a href="#about" class="scroll">About</a>
+                </li>
+                <li>
+                    <a href="#contact" class="scroll">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="landing" class="landing relative">
+            <span class="observe absolute"></span>
+            <h1><span>Hi, I'm Garrick</span><br><span>A Web Developer</span></h1>
+            <div class="planet-wrap">
+                <img class="img--planet" src="images/mars-landing-bg.png" width="100%" height="auto">
+                <div class="img--satellite">
+                    <img src="images/satellite.png" width="100%" height="auto">
+                </div>
+                <div class="img--half-moon">
+                    <img src="images/half-moon.png" width="100%" height="auto">
+                </div>
+                <div class="img--comet-motion">
+                    <img src="images/comet-white.png" width="100%" height="auto">
+                </div>
+            </div>
+        </section>
+        <div class="container--about relative">
+            <section id="about" class="about mt-3">
+                <span class="observe absolute"></span>
+                <div class="relative">
+                    <h2>About</h2>
+                    <div class="absolute spaceman-wrapper">
+                        <div class="relative">
+                            <div class="img--spaceman-motion">
+                                <img src="images/spaceman.png" width="100%" height="auto">
+                            </div>
+                            <div class="img--paintbrush-motion">
+                                <img src="images/paintbrush.png" width="100%" height="auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <div id="devTime">
+                            <div id="dev-icon" class="dev-icon-bubble">
+                                <img src="images/javascript.svg" height="44" width="auto">
+                                <img src="images/php.svg" height="30" width="auto">
+                                <img src="images/nodejs.svg" height="40" width="auto">
+                                <img src="images/git-icon.svg" height="44" width="auto">
+                            </div>
+                            <p class="mt-3">I've been building stuff on the web for</p>
+                            <p></p>
+                            <p style="max-width: 620px; margin: 0 auto; padding-top: 3rem;">I'm experienced in various server-side languages as well as front-end technologies. I enjoy building apps that make life better. Problem solving is what I do and development is my passion.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="img--saturn">
+                <img src="images/saturn.png" width="100%" height="auto">
+            </div>
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+        </div>
+        <section id="contact" class="contact relative" style="height: 500px;">
+            <span class="observe absolute"></span>
 
-    <script src="js/app.js"></script>
+        </section>
+    </main>
+    <footer>
+        <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
+        <p class="copyright mt-3 mb-2">&copy; <span></span> <a href="/">Garrick Crouch</a><br>All Rights Reserved</p>
+    </footer>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>

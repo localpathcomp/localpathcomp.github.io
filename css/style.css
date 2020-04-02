@@ -1,0 +1,595 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/******
+ RESET END
+******/
+
+body {
+    overflow-x: hidden;
+    font-family: monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+header,
+nav,
+main,
+footer {
+    display: flex;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 60px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav li a {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav li.active a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    background: no-repeat url(../images/comet-nav.png);
+    background-size: 48px;
+    animation: comet-nav 1s linear forwards;
+}
+
+@keyframes comet-nav {
+    0% {
+        top: -45px;
+        right: 125%;
+    }
+    100% {
+        top: -10px;
+        right: 90%;
+    }
+}
+
+main {
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+span.observe {
+    top: 50%;
+    left: 0;
+}
+
+
+/* footer */
+
+footer {
+    flex-flow: column wrap;
+    text-align: center;
+    background: #100e17;
+}
+
+footer .copyright {
+    color: #fff;
+}
+
+footer .copyright a {
+    color: #fff;
+}
+
+
+/* landing */
+
+.landing {
+    width: 100vw;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(93, 55, 216, .4)), to(#dd5350));
+    background-image: linear-gradient(0deg, rgba(93, 55, 216, .4), #dd5350);
+}
+
+.landing h1 {
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin: 160px 0 120px;
+}
+
+.landing h1 span:first-of-type,
+.about h2 {
+    font-family: 'Chango', cursive;
+    font-size: 2.5rem;
+}
+
+.planet-wrap {
+    max-width: 800px;
+    margin: auto;
+}
+
+.img--planet {
+    position: relative;
+    z-index: 2;
+}
+
+.img--satellite {
+    position: absolute;
+    max-width: 65px;
+    z-index: 3;
+    animation: satellite 20s infinite;
+}
+
+@keyframes satellite {
+    0% {
+        top: 35%;
+        left: -10%;
+    }
+    20% {
+        top: 45%;
+        left: 30%;
+    }
+    40% {
+        top: 46%;
+        left: 50%;
+        transform: rotate(45deg);
+    }
+    60% {
+        top: 45%;
+        left: 70%;
+        transform: rotate(55deg)
+    }
+    80% {
+        top: 30%;
+        left: 85%;
+        transform: rotate(75deg)
+    }
+    100% {
+        top: -10%;
+        left: 110%;
+    }
+}
+
+.img--half-moon {
+    width: 80px;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+
+.img--comet-motion {
+    width: 80px;
+    position: absolute;
+    animation: comet-motion 20s infinite;
+}
+
+@keyframes comet-motion {
+    0% {
+        top: -10px;
+        right: 60px;
+    }
+    100% {
+        top: 100%;
+        right: 50%;
+    }
+}
+
+
+/* about */
+
+.container--about {
+    background: #000;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.about {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 80px;
+    padding-top: 80px;
+    color: #fff;
+}
+
+div.dev-icon-bubble {
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background: #fff;
+}
+
+@keyframes dev-iconFadeInOut {
+    0% {
+        opacity: 1;
+    }
+    17% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    92% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#dev-icon {
+    position: relative;
+}
+
+#dev-icon img {
+    position: absolute;
+    left: 0;
+}
+
+#dev-icon img {
+    animation-name: dev-iconFadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+#dev-icon img:nth-of-type(1) {
+    top: 16px;
+    left: 21%;
+    opacity: 0;
+    animation-delay: 7.5s;
+}
+
+#dev-icon img:nth-of-type(2) {
+    top: 22px;
+    left: 10px;
+    opacity: 0;
+    animation-delay: 5s;
+}
+
+#dev-icon img:nth-of-type(3) {
+    top: 20px;
+    left: 8px;
+    opacity: 0;
+    animation-delay: 2.5s;
+}
+
+#dev-icon img:nth-of-type(4) {
+    top: 16px;
+    left: 21%;
+    opacity: 0;
+    animation-delay: 0s;
+}
+
+div#devTime {
+    text-align: center;
+}
+
+div#devTime p {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-family: monospace;
+}
+
+div.spaceman-wrapper {
+    top: 0;
+    left: 135px;
+}
+
+.img--spaceman-motion {
+    width: 165px;
+    position: absolute;
+    animation: spaceman-motion 20s infinite;
+}
+
+@keyframes spaceman-motion {
+    0% {
+        top: 2px;
+        left: 2px;
+    }
+    25% {
+        top: 4px;
+        left: 2px;
+        transform: rotate(-10deg);
+    }
+    50% {
+        top: 2px;
+        left: 2px;
+    }
+    75% {
+        top: -1px;
+        left: 2px;
+        transform: rotate(15deg);
+    }
+    100% {
+        top: 2px;
+        left: 2px;
+    }
+}
+
+.img--paintbrush-motion {
+    width: 45px;
+    position: absolute;
+    left: 30px;
+    top: 25px;
+    animation: paintbrush-motion 20s infinite;
+}
+
+@keyframes paintbrush-motion {
+    0% {
+        transform: rotate(-10deg);
+    }
+    25% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    75% {
+        transform: rotate(25deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+.img--saturn {
+    width: 150px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 2;
+    transition: all 1s ease-in-out;
+}
+
+
+/* contact */
+
+
+/* media queries */
+
+@media only screen and (min-width: 768px) {
+    .col {
+        flex: 1;
+    }
+    .img--saturn {
+        width: 240px;
+        top: 100px;
+        left: 100px;
+        transition: all 1s ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 395px) {
+    @keyframes satellite {
+        0% {
+            top: 35%;
+            left: -10%;
+        }
+        20% {
+            top: 55%;
+            left: 30%;
+        }
+        40% {
+            top: 56%;
+            left: 50%;
+            transform: rotate(45deg);
+        }
+        60% {
+            top: 55%;
+            left: 70%;
+            transform: rotate(55deg)
+        }
+        80% {
+            top: 30%;
+            left: 85%;
+            transform: rotate(75deg)
+        }
+        100% {
+            top: -10%;
+            left: 110%;
+        }
+    }
+}
