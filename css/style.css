@@ -290,7 +290,6 @@ footer p {
 }
 
 .landing h1 {
-    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     color: #fff;
     font-weight: 400;
     line-height: 1.5;
@@ -562,23 +561,23 @@ div.spaceman-wrapper {
     }
 }
 
-@media only screen and (max-width: 395px) {
+@media only screen and (max-width: 455px) {
     @keyframes satellite {
         0% {
             top: 35%;
             left: -10%;
         }
         20% {
-            top: 55%;
+            top: 65%;
             left: 30%;
         }
         40% {
-            top: 56%;
+            top: 66%;
             left: 50%;
             transform: rotate(45deg);
         }
         60% {
-            top: 55%;
+            top: 65%;
             left: 70%;
             transform: rotate(55deg)
         }
