@@ -16,9 +16,9 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="navBar">
             <ul class="scroll-spy">
-                <li class="active">
+                <li class="active home">
                     <a href="#landing" class="scroll">Home</a>
                 </li>
                 <li>
@@ -30,10 +30,11 @@
             </ul>
         </nav>
     </header>
+    <div class="spot"></div>
     <main>
         <section id="landing" class="landing relative">
             <span class="observe absolute"></span>
-            <h1><span>Hi, I'm Garrick</span><br><span>A Web Developer</span></h1>
+            <h1><span class="section-title">Hi, I'm Garrick</span><br><span>A Web Developer</span></h1>
             <div class="planet-wrap">
                 <img class="img--planet" src="images/mars-landing-bg.png" width="100%" height="auto">
                 <div class="img--satellite">
@@ -51,7 +52,7 @@
             <section id="about" class="about mt-3">
                 <span class="observe absolute"></span>
                 <div class="relative">
-                    <h2>About</h2>
+                    <h2 class="section-title">About</h2>
                     <div class="absolute spaceman-wrapper">
                         <div class="relative">
                             <div class="img--spaceman-motion">
@@ -86,17 +87,41 @@
             <div id="stars2"></div>
             <div id="stars3"></div>
         </div>
-        <section id="contact" class="contact relative" style="height: 500px;">
+        <section id="contact" class="contact relative">
             <span class="observe absolute"></span>
-
+            <h2 class="section-title mt-3">Contact</h2>
+            <p class="mt-3">Interested in working on a project or wanna get an app off the ground?<br>Drop me a line!</p>
+            <div class="form-wrapper mt-3 mb-3">
+                <form class="fp-parse" action="https://app.designerswhocode.org/api/mail" method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <input name="firstName" type="text" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input name="lastName" type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input name="email" type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col">
+                            <input name="phone" type="tel" class="form-control" placeholder="Phone">
+                        </div>
+                    </div>
+                    <button name="submit" type="submit">Submit</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer>
-        <p><a href="https://codepen.io/SWBennett06/pen/bLEjJR" target="_blank">Scroll Spy Intersection Observer</a> - Codepen <a href="https://codepen.io/SWBennett06" target="_blank">@SWBennett06</a></p>
-        <p><a href="https://codepen.io/maxxheth/pen/oVYRdm" target="_blank">Smooth Scroll JS</a> - Codepen <a href="https://codepen.io/maxxheth" target="_blank">@maxxheth</a></p>
-        <p><a href="https://codepen.io/saransh/pen/BKJun" target="_blank">Parallax Star Background</a> - Codepen <a href="https://codepen.io/saransh">@saransh</a></p>
-        <p><a href="https://www.sitepoint.com/community/t/count-up-script-from-a-given-date/39460">JavaScript Count-Up</a> - Sitepoint <a href="https://www.sitepoint.com/community/u/Sicho" target="_blank">Sicho</a></p>
-        <p><a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">Background vector created by freepik - www.freepik.com</a></p>
+        <p>Icons created with Adobe Spark</p>
+        <p><a href="https://codepen.io/SWBennett06/pen/bLEjJR" target="_blank">Scroll Spy Intersection Observer</a><br>- Codepen <a href="https://codepen.io/SWBennett06" target="_blank">@SWBennett06</a> -</p>
+        <p><a href="https://codepen.io/maxxheth/pen/oVYRdm" target="_blank">Smooth Scroll JS</a><br> - Codepen <a href="https://codepen.io/maxxheth" target="_blank">@maxxheth</a> -</p>
+        <p><a href="https://codepen.io/saransh/pen/BKJun" target="_blank">Parallax Star Background</a><br> - Codepen <a href="https://codepen.io/saransh">@saransh</a> -</p>
+        <p><a href="https://codepen.io/P1N2O/pen/pyBNzX" target="_blank">Pure CSS Gradient Background Animation</a><br> - Codepen <a href="https://codepen.io/P1N2O" target="_blank">@P1N2O</a> -</p>
+        <p><a href="https://www.sitepoint.com/community/t/count-up-script-from-a-given-date/39460">JavaScript Count-Up</a><br> - Sitepoint <a href="https://www.sitepoint.com/community/u/Sicho" target="_blank">Sicho</a> -</p>
+        <p>Background vector created by freepik<br> - <a href="https://www.freepik.com/free-photos-vectors/background" target="_blank">www.freepik.com</a> -</p>
         <p class="copyright mt-3 mb-2">&copy; <span></span> <a href="/">Garrick Crouch</a><br>All Rights Reserved</p>
     </footer>
     <script type="module" src="js/app.js?v=0.1.0"></script>
